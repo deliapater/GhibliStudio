@@ -4,6 +4,10 @@
     <div class="main-container">
       <film-select :films = "films"></film-select>
       <film-details :film = "selectedFilm"></film-details>
+      <div v-if="film">
+      <person-select :people = "people"></person-select>
+      <person-details :person = "selectedPerson"></person-details>
+    </div>
     </div>
   </div>
 </template>
@@ -11,6 +15,8 @@
 <script>
 import FilmsSelect from './components/FilmsSelect.vue';
 import FilmDetails from './components/FilmDetails.vue';
+import PeopleSelect from './components/PeopleSelect.vue';
+import PersonDetails from './components/PersonDetails.vue';
 import {eventBus} from './main.js';
 
 
@@ -18,12 +24,16 @@ export default {
   data(){
     return {
       films: [],
-      selectedFilm: null
+      selectedFilm: null,
+      people: [],
+      selectPerson: null,
     }
   },
   components: {
     'film-select': FilmsSelect,
-    'film-details': FilmDetails
+    'film-details': FilmDetails,
+    'person-select': PeopleSelect,
+    'person-details': PersonDetails,
 
   },
   mounted(){
@@ -32,6 +42,9 @@ export default {
     .then(films => this.films = films)
     eventBus.$on('film-selected', (index) => {
       this.selectedFilm = this.films[index];
+    }),
+    eventBus.$on('person-selected', (index) => {
+      this.selectedPerson = this.people[index];
     })
   }
 }

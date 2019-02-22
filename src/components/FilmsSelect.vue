@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <select v-on:change="handleSelect" v-model="selectedFilm" id="film-selected">
-      <option disable value="">Select Film</option>
+      <option disable value="">Select a Film</option>
       <option v-for="(film,index) in films":value="index">{{film.title}}</option>
     </select>
   </div>
@@ -17,6 +17,7 @@ export default {
       selectedFilm: ''
     }
   },
+
   props: ['films'],
   methods: {
     "handleSelect": function(){
