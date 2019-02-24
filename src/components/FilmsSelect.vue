@@ -1,11 +1,11 @@
 <template lang="html">
-  <div>
+  <div class="main-selection">
     <div>
-    <select v-on:change="handleSelect" v-model="selectedFilm" id="film-selected">
-      <option disable value="">Select a Film</option>
-      <option v-for="(film,index) in films":value="index">{{film.title}}</option>
-    </select>
-  </div>
+      <select v-on:change="handleSelect" v-model="selectedFilm" id="film-selected">
+        <option disable value="">Select a Film</option>
+        <option v-for="(film,index) in films":value="index">{{film.title}}</option>
+      </select>
+    </div>
 
   </div>
 </template>
@@ -32,7 +32,6 @@ export default {
 </script>
 
 <style lang="css" scoped>
-
 
 
 </style>

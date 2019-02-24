@@ -5,9 +5,9 @@
       <film-select :films = "films"></film-select>
       <film-details :film = "selectedFilm"></film-details>
       <div v-if="film">
-      <person-select :people = "people"></person-select>
-      <person-details :person = "selectedPerson"></person-details>
-    </div>
+        <person-select :people = "people"></person-select>
+        <person-details :person = "selectedPerson"></person-details>
+      </div>
     </div>
   </div>
 </template>
@@ -47,7 +47,7 @@ export default {
     fetch('https://ghibliapi.herokuapp.com/people')
     .then(res => res.json())
     .then(people => this.people = people)
-      eventBus.$on('person-selected', (index) => {
+    eventBus.$on('person-selected', (index) => {
       this.selectedPerson = this.people[index];
     })
   }
@@ -55,13 +55,15 @@ export default {
 </script>
 
 <style lang="css" scoped>
-  .main-container {
-    display: flex;
-    justify-content: center;
-  }
+.main-container {
+  display: flex;
+  justify-content: center;
+}
 
-  h1 {
-    text-align: center;
-  }
+h1 {
+  text-align: center;
+  font-family: fantasy;
+  font-size: 50px;
+}
 
 </style>

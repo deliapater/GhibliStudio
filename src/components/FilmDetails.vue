@@ -1,10 +1,15 @@
 <template lang="html">
   <div v-if="film" class="info-container">
     <h1>{{film.title}}</h1>
-    <h4>{{film.description}}</h4>
-    <p>Director: {{film.director}}</p>
-    <p>Producer: {{film.producer}}</p>
-    <p>Realase Date: {{film.release_date}}</p>
+    <div class="box-description">
+      <h4>{{film.description}}</h4>
+    </div>
+    <div class="box-info">
+      <p><b>Director:</b> {{film.director}}</p>
+      <p><b>Producer:</b> {{film.producer}}</p>
+      <p><b>Realase Date:</b> {{film.release_date}}</p>
+    </div>
+
     <template v-if="film.title === 'Castle in the Sky'">
       <img src="https://images.alphacoders.com/828/thumb-1920-828255.png">
     </template>
@@ -83,7 +88,45 @@ export default {
 img {
   width:500px;
   height:300px;
+  display: flex;
+  margin: 20px;
+  border-radius: 5%
 }
+
+h1 {
+  font-family: fantasy;
+  font-weight: bold;
+  display: center;
+  background-color: white;
+  border: 1px solid white;
+  opacity: 0.9;
+  width: 600px;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10%;
+}
+
+p {
+  font-family: "Courier New", Courier, monospace;
+}
+
+h4 {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+.box-description, .box-info {
+  display: flex;
+  background-color: white;
+  border: 1px solid white;
+  opacity: 0.9;
+  width: 600px;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10%;
+}
+
 
 
 </style>

@@ -1,10 +1,10 @@
 <template lang="html">
-<div v-if="person" class="info-container-2">
-  <h1>{{person.name}}</h1>
-  <p>{{person.gender}}</p>
-  <p>{{person.age}}</p>
+  <div v-if="person" class="info-container-2">
+    <h1>{{person.name}}</h1>
+    <p>{{person.gender}}</p>
+    <p>{{person.age}}</p>
 
-</div>
+  </div>
 </template>
 
 <script>
