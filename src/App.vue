@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <h1>Ghibli Studios</h1>
+    <h1>Studio Ghibli</h1>
     <div class="main-container">
       <film-select :films = "films"></film-select>
       <film-details :film = "selectedFilm"></film-details>
@@ -43,7 +43,11 @@ export default {
     eventBus.$on('film-selected', (index) => {
       this.selectedFilm = this.films[index];
     }),
-    eventBus.$on('person-selected', (index) => {
+
+    fetch('https://ghibliapi.herokuapp.com/people')
+    .then(res => res.json())
+    .then(people => this.people = people)
+      eventBus.$on('person-selected', (index) => {
       this.selectedPerson = this.people[index];
     })
   }
@@ -51,8 +55,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
-  /* .main-container {
+  .main-container {
     display: flex;
-    justify-content: space-between;
-  } */
+    justify-content: center;
+  }
+
+
 </style>
