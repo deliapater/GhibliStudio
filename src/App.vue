@@ -1,5 +1,5 @@
 <template lang="html">
-  <div>
+  <div class="background">
     <h1>Studio Ghibli</h1>
     <div class="main-container">
       <film-select :films = "films"></film-select>
@@ -60,5 +60,8 @@ export default {
     justify-content: center;
   }
 
+  h1 {
+    text-align: center;
+  }
 
 </style>
