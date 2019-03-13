@@ -46,9 +46,9 @@
     <template v-if="film.title === 'The Cat Returns'">
       <img src="https://s1.thcdn.com/productimg/1600/1600/11655841-9754546298583822.jpg">
     </template>
-    <template v-if="film.id === 'cd3d059c-09f4-4ff3-8d63-bc765a5184fa'">
-      <img src="https://www.goog6_c1081.0021.jpg&imgrefurl=http%3A%2F%2Fwww.ifccenter.com%2Ffilms%2Fhowls-moving-castle%2F&docid=hXrWW_t0hSUscM&tbnid=XEPERK_yhbWzQM%3A&vet=10ahUKEwiN8rni5dTgAhV1unEKHWlpDfQQMwhCKAUwBQ..i&w=2218&h=1200&bih=710&biw=1386&q=Howl%27s%20Moving%20Castle&ved=0ahUKEwiN8rni5dTgAhV1unEKHWlpDfQQMwhCKAUwBQ&iact=mrc&uact=8">
-    </template>
+    <!-- <template v-if='film.id === "cd3d059c-09f4-4ff3-8d63-bc765a5184fa"'>
+      <img src="https://www.goog6_c1081.0021.jpg&imgrefurl=http%3A%2F%2Fwww.ifccenter.com%2Ffilms%2Fhowls-moving-castle%2F&docid=hXrWW_t0hSUscM&tbnid=XEPERK_yhbWzQM%3A&vet=10ahUKEwiN8rni5dTgAhV1unEKHWlpDfQQMwhCKAUwBQ..i&w=2218&h=1200&bih=710&biw=1386&q=Howl%27s%20Moving%20Castle&ved=0ahUKEwiN8rni5dTgAhV1unEKHWlpDfQQMwhCKAUwBQ&iact=mrc&uact=8"> -->
+    <!-- </template> -->
     <template v-if="film.title === 'Tales from Earthsea'">
       <img src="https://filmschoolrejects.com/wp-content/uploads/2018/05/tales-from-earthsea.png">
     </template>

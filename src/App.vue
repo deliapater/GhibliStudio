@@ -4,10 +4,6 @@
     <div class="main-container">
       <film-select :films = "films"></film-select>
       <film-details :film = "selectedFilm"></film-details>
-      <div v-if="film">
-        <person-select :people = "people"></person-select>
-        <person-details :person = "selectedPerson"></person-details>
-      </div>
     </div>
   </div>
 </template>
@@ -15,8 +11,6 @@
 <script>
 import FilmsSelect from './components/FilmsSelect.vue';
 import FilmDetails from './components/FilmDetails.vue';
-import PeopleSelect from './components/PeopleSelect.vue';
-import PersonDetails from './components/PersonDetails.vue';
 import {eventBus} from './main.js';
 
 
@@ -32,9 +26,6 @@ export default {
   components: {
     'film-select': FilmsSelect,
     'film-details': FilmDetails,
-    'person-select': PeopleSelect,
-    'person-details': PersonDetails,
-
   },
   mounted(){
     fetch('https://ghibliapi.herokuapp.com/films')
