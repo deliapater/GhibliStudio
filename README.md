@@ -1,5 +1,5 @@
 # StudioGhibli
-**Individual Project: JavaScript, Vue.ja **
+** Individual Project: JavaScript, Vue.ja **
 
 ## The Project
 StudioGhibli is a JavaScript Vue application using an [external API](https://developers.teleport.org/api/reference/) and URL images to visually display the reference pictures of each film, to help assist people find their fauvorite Studio Ghibli films.
